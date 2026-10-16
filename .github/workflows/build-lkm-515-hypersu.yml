@@ -1,0 +1,13 @@
+name: Build LKM 5.15 HyperSU
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: ./.github/workflows/ddk-lkm.yml
+    with:
+      kmi: android13-5.15
+      package_name: com.hypersu.manager
+      expected_size: '888'
+      expected_hash: aaef52d74182a668b257065f27a53ecb3669047826c5090ed8102af6a7c3bcc4
